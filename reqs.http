@@ -1,0 +1,22 @@
+@server = https://axelavalos02-expert-spork-rjvv45x6w7gfgrq-8080.preview.app.github.dev
+@api = {{server}}/api
+
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos"}
+#
+GET {{api}}/instrumentoes
+###
+POST {{api}}/instrumentoes
+Content-Type: application/json
+
+{"nombre": "Bateria", "categoria": "http://localhost/api/ec3/categorias/2"}
+###
+GET {{api}}/instrumentoes/2/categoria
+###
+GET {{api}}/instrumentoes?sort=nombre,desc
